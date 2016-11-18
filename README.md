@@ -1,2 +1,4 @@
-# deployment
-Deployment configuration
+# Lumeer Deployment Configuration
+
+## Containers Initialization
+
