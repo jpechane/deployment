@@ -1,3 +1,3 @@
 FROM lumeer/keycloak-postgres:latest
 
-CMD ["-b", "0.0.0.0", "--server-config", "standalone-ha.xml"]
+CMD ["-b", "$(hostname -i)", "--server-config", "standalone-ha.xml"]
