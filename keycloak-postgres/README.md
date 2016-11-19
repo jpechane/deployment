@@ -8,7 +8,7 @@ Extends the Keycloak docker image to use PostgreSQL
 
 First start a PostgreSQL instance using the PostgreSQL docker image:
 
-    docker run --name postgres -e POSTGRES_DATABASE=keycloak -e POSTGRES_USER=keycloak -e POSTGRES_PASSWORD=password -e POSTGRES_ROOT_PASSWORD=root_password -d postgres
+    docker run --name postgres -e POSTGRES_DATABASE=keycloak -e POSTGRES_USER=keycloak -e POSTGRES_PASSWORD=password -d postgres
 
 ### Start a Keycloak instance
 
