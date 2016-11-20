@@ -28,7 +28,7 @@
     <xsl:template match="//ds:subsystem/ds:datasources/ds:drivers">
         <xsl:copy>
             <xsl:apply-templates select="node()|@*"/>
-                <ds:driver name="postgresql" module="org.postgresql">
+                <ds:driver name="postgresql" module="org.postgresql.jdbc">
                     <ds:xa-datasource-class>org.postgresql.xa.PGXADataSource</ds:xa-datasource-class>
                 </ds:driver>
         </xsl:copy>

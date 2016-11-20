@@ -20,7 +20,7 @@
   ~ Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
   ~ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
   -->
-<module xmlns="urn:jboss:module:1.1" name="org.postgresql">
+<module xmlns="urn:jboss:module:1.1" name="org.postgresql.jdbc">
    <resources>
       <resource-root path="postgresql-9.4.1212.jar"/>
    </resources>
