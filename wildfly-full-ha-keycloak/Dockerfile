@@ -2,7 +2,7 @@ FROM jboss/wildfly:10.1.0.Final
 
 MAINTAINER marvenec@gmail.com
 
-ENV KEYCLOAK_VERSION 2.3.0.Final
+ENV KEYCLOAK_VERSION 2.4.0.Final
 
 WORKDIR /opt/jboss/wildfly
 
@@ -10,8 +10,11 @@ RUN curl -L https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/adapters/keyc
 
 WORKDIR /opt/jboss
 
-RUN sed -i -e 's/=standalone.xml/standalone-full-ha.xml/' $JBOSS_HOME/bin/adapter-install-offline.cli
+RUN sed -i -e 's/=standalone.xml/=standalone-full-ha.xml/' $JBOSS_HOME/bin/adapter-install-offline.cli
 RUN $JBOSS_HOME/bin/jboss-cli.sh < $JBOSS_HOME/bin/adapter-install-offline.cli
+
+ADD disable-https.cli /opt/jboss/wildfly/bin
+RUN $JBOSS_HOME/bin/jboss-cli.sh < $JBOSS_HOME/bin/disable-https.cli
 
 ADD docker-entrypoint.sh /opt/jboss/
 
