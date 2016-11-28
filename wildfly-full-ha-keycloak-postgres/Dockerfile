@@ -8,4 +8,4 @@ ADD module.xml /opt/jboss/keycloak/modules/system/layers/base/org/postgresql/jdb
 
 ADD datasource-install.cli /opt/jboss/wildfly/bin
 
-RUN $JBOSS_HOME/bin/jboss-cli.sh < $JBOSS_HOME/bin/datasource-install.cli
+RUN $JBOSS_HOME/bin/jboss-cli.sh --file=$JBOSS_HOME/bin/datasource-install.cli

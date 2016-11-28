@@ -14,7 +14,7 @@ RUN sed -i -e 's/=standalone.xml/=standalone-full-ha.xml/' $JBOSS_HOME/bin/adapt
 RUN $JBOSS_HOME/bin/jboss-cli.sh --file=$JBOSS_HOME/bin/adapter-install-offline.cli
 
 ADD disable-https.cli /opt/jboss/wildfly/bin
-RUN $JBOSS_HOME/bin/jboss-cli.sh < $JBOSS_HOME/bin/disable-https.cli
+RUN $JBOSS_HOME/bin/jboss-cli.sh --file=$JBOSS_HOME/bin/disable-https.cli
 
 ADD docker-entrypoint.sh /opt/jboss/
 
