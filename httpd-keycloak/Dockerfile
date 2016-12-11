@@ -7,3 +7,4 @@ COPY httpd-ssl.conf /usr/local/apache2/conf/extra/httpd-ssl.conf
 
 COPY server.key /usr/local/apache2/conf/
 COPY server.crt /usr/local/apache2/conf/
+COPY root.crt /usr/local/apache2/conf/
