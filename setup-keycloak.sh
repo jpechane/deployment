@@ -5,18 +5,18 @@ export PWD=$1
 
 ## Build Keycloak image
 cd keycloak
-docker build . -t lumeer/keycloak
+docker build -t lumeer/keycloak .
 cd ..
 
 ## Build Keycloak with PostrgeSQL image
 cd keycloak-postgres
-docker build . -t lumeer/keycloak-postgres
+docker build -t lumeer/keycloak-postgres .
 cd ..
 
 ## Build HTTPD for Keycloak
 cd httpd-keycloak
-docker build . -t lumeer/httpd-keycloak
-cd..
+docker build -t lumeer/httpd-keycloak .
+cd ..
 
 ## Create network
 docker network create keycloak-net
