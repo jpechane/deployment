@@ -1,4 +1,4 @@
-FROM lumeer/wildfly-full-ha-keycloak:latest
+FROM airfoillabs/wildfly-keycloak:latest
 
 MAINTAINER marvenec@gmail.com
 
