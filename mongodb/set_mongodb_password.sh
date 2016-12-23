@@ -5,7 +5,7 @@ DATABASE=${MONGODB_DATABASE:-"admin"}
 PASS=${MONGODB_PASS:-$(pwgen -s 12 1)}
 _word=$( [ ${MONGODB_PASS} ] && echo "preset" || echo "random" )
 
-mongo_cmd="mongo admin --ssl --sslPEMKeyFile /etc/ssl/mongodb.pem --sslAllowInvalidCertificates"
+mongo_cmd="mongo admin --ssl --sslPEMKeyFile /etc/ssl/mongodb.pem --sslAllowInvalidHostnames --sslAllowInvalidCertificates"
 
 RET=1
 while [[ RET -ne 0 ]]; do

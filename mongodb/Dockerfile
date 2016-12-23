@@ -19,6 +19,7 @@ ADD set_mongodb_password.sh /set_mongodb_password.sh
 
 VOLUME [ "/data/db" ]
 
+ADD mongodb-ca.pem /etc/ssl/mongodb-ca.pem
 ADD mongodb.pem /etc/ssl/mongodb.pem
 
 EXPOSE 27017 28017
