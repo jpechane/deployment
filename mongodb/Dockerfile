@@ -24,4 +24,4 @@ ADD mongodb.pem /etc/ssl/mongodb.pem
 EXPOSE 27017 28017
 
 # Set /usr/bin/mongod as the dockerized entry-point application
-ENTRYPOINT ["/run.sh"]
+CMD ["/run.sh"]
