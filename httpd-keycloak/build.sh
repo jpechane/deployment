@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t lumeer/httpd .
+docker build -t lumeer/httpd-keycloak .
