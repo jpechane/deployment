@@ -1,3 +1,3 @@
 #!/bin/bash
-./stop.sh
+./build.sh && ./stop.sh
 ./start-v10.sh
