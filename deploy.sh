@@ -7,7 +7,7 @@ mvn clean install -Pproduction -DskipTests
 cd ~/web-ui
 git reset --hard HEAD
 git pull
-sed -i -e 's/"disabled": "true"/"disabled": "false"/' src/main/webapp/WEB-INF/keycloak.json
+#sed -i -e 's/"disabled": "true"/"disabled": "false"/' src/main/webapp/WEB-INF/keycloak.json
 mvn clean package -DskipTests
 
 if [ ! -f ~/engine/war/target/engine-war.war ]; then
