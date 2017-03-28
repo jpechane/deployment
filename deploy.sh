@@ -1,4 +1,6 @@
 #!/bin/bash
+source /home/mvecera/.zshenv
+
 cd /home/mvecera/engine
 git reset --hard HEAD
 git pull
