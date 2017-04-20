@@ -2,7 +2,7 @@ FROM jboss/base-jdk:8
 
 MAINTAINER marvenec@gmail.com
 
-ENV KEYCLOAK_VERSION 2.4.0.Final
+ENV KEYCLOAK_VERSION 3.0.0.Final
 # Enables signals getting passed from startup script to JVM
 # ensuring clean shutdown when container is stopped.
 ENV LAUNCH_JBOSS_IN_BACKGROUND 1
@@ -22,6 +22,9 @@ RUN java -jar /usr/share/java/saxon.jar -s:/opt/jboss/keycloak/standalone/config
 
 ADD proxyForward.xsl /opt/jboss/keycloak/
 RUN java -jar /usr/share/java/saxon.jar -s:/opt/jboss/keycloak/standalone/configuration/standalone.xml -xsl:/opt/jboss/keycloak/proxyForward.xsl -o:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+
+ADD lumeer-theme.zip /opt/jboss/keycloak/themes
+RUN cd /opt/jboss/keycloak/themes && unzip lumeer-theme.zip
 
 ENV JBOSS_HOME /opt/jboss/keycloak
 

@@ -1,4 +1,4 @@
-FROM lumeer/keycloak:latest
+FROM lumeer/keycloak:3.0.0
 
 MAINTAINER marvenec@gmail.com
 
