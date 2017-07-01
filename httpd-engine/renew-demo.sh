@@ -1,4 +1,5 @@
 #!/bin/bash
-docker stop httpd-engine
+date
+docker stop httpd-lumeer
 certbot-auto renew
-docker start httpd-engine
+docker start httpd-lumeer
