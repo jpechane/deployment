@@ -1,4 +1,5 @@
 #!/bin/bash
+date
 source /home/mvecera/.zshenv
 
 UP1=0
